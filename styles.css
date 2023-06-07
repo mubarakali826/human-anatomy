@@ -1,0 +1,442 @@
+html{
+  font-size: 16px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #e5f2ff;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+.body {
+  /* margin-top: 80px; */
+  margin: 5rem auto;
+  width: 50%;
+  position: relative;
+  display: inline-block;
+}
+.body img{
+  position: relative;
+}
+.body img::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1));
+  z-index: 1;
+  pointer-events: none;
+
+}
+.outercontainer{
+  position: relative;
+}
+.body img {
+  width: 50rem;
+  height: 62.5rem;
+  display: block;
+  width: 100%;
+}
+.organHover {
+  width: 6.87rem;
+  height: 6.87rem;
+  position: absolute;
+  transition: all 600ms ease-in;
+  cursor: pointer;
+  opacity: 0;
+  
+}
+h1{
+  margin-left: 6rem;
+  color: #002f5e;
+}
+#lung1 {
+  
+  background-color: black;
+  top: 28.43rem;
+  left: 38.75rem;
+  height: 12.4rem;
+  width: 6.5rem;
+}
+
+#lung2 {
+  
+  background-color: black;
+  top: 28.87rem;
+  left: 52.56rem;
+  width: 5.56rem;
+  height: 11.375rem;
+}
+#heart {
+  height: 3.125rem;
+  width: 3.125rem;
+  background-color: red;
+  top: 34.37rem;
+  left: 47.5rem;
+}
+#liver {
+    height: 6.25rem;
+    width: 12.5rem;
+    background-color: rgb(255, 234, 0);
+    top: 42.1rem;
+    left: 37.5rem;
+}
+#kidney {
+    height: 4.68rem;
+    width: 2.12rem;
+    background-color: rgb(255, 234, 0);
+    top: 45.62rem;
+    left: 55.62rem;
+}
+#smallintestine {
+  height: 10.37rem;
+  width: 12rem;
+  background-color: rgb(255, 234, 0);
+  top: 55.43rem;
+  left: 41.62rem;
+}
+
+  #largeintestine {
+    top: 52.18rem;
+    left: 38.75rem;
+    height: 3.125rem;
+    width: 14.7rem;
+    background-color: honeydew;
+}
+#largeintestine1{
+  top: 55.3rem;
+  left: 38.3rem;
+  height: 8.87rem;
+  width: 3.12rem;
+  background-color: rgb(47, 115, 47);
+}
+#largeintestine2{
+    top: 55.37rem;
+    left: 53.12rem;
+    height: 9.37rem;
+    width: 2.75rem;
+    background-color: honeydew;
+}
+#gallbladder {
+  
+  height: 1.56rem;
+  width: 2.5rem;
+  background-color: rgb(255, 234, 0);
+  top: 49.62rem;
+  left: 41.56rem;
+}
+#pancreas {
+  height: 1.625rem;
+  width: 3.125rem;
+  background-color: rgb(255, 234, 0);
+  top: 48.44rem;
+  left: 45.25rem;
+}
+#stomach {
+    height: 2.31rem;
+    width: 4.625rem;
+    background-color: rgb(255, 234, 0);
+    top: 46.875rem;
+    left: 50rem;
+}
+
+
+
+
+
+
+.images {
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out;
+    position: absolute;
+  
+  }
+  
+  #imageContainer1.show {
+    opacity: 1;
+  }
+  
+  #hoverImage1 {
+    position: absolute;
+    width: 21rem;
+    height: auto;
+    top: -59.37rem;
+    left: 1.875rem;
+  }
+  
+  #imageContainer2.show {
+    opacity: 1;
+  }
+  
+  #hoverImage2 {
+    position: absolute;
+    width: 21rem;
+    height: auto;
+    top: -59.37rem;
+    left: 1.875rem;
+  }
+  #imageContainer2.show {
+    opacity: 1;
+    animation: heartbeat 2.1s infinite;
+  
+  }
+  
+  #hoverImage2 {
+    position: absolute;
+    width: 21rem;
+    height: auto;
+    top: -59.37rem;
+    left: 1.875rem;
+    transition: all 1000ms ease-out ;
+  }
+  
+  #imageContainer3.show {
+    opacity: 1;
+  }
+  
+  #hoverImage3 {
+    position: absolute;
+    width: 21rem;
+    height: auto;
+    top: -34.375rem;
+    left: 1.875rem;
+  }
+
+  #imageContainer4.show {
+    opacity: 1;
+  }
+  
+  
+  #hoverImage4 {
+    position: absolute;
+    width: 21rem;
+    height: auto;
+    top: -40.625rem;
+    left: 1.875rem;
+  }
+
+  #imageContainer5.show {
+    opacity: 1;
+  }
+  
+  #hoverImage5 {
+    position: absolute;
+    width: 18.75rem;
+    height: auto;
+    top: -28.125rem;
+    left: 1.25rem;
+  }
+
+  #imageContainer6.show {
+    opacity: 1;
+  }
+  
+  #hoverImage6 {
+    position: absolute;
+    width: 21rem;
+    height: auto;
+    top: -34.375rem;
+    left: 1.25rem;
+  }
+
+  #imageContainer7.show {
+    opacity: 1;
+  }
+  
+  #hoverImage7 {
+    position: absolute;
+    width: 21rem;
+    height: auto;
+    top: -43.75rem;
+    left: 1.25rem;
+  }
+
+  #imageContainer8.show {
+    opacity: 1;
+  }
+  
+  #hoverImage8 {
+    position: absolute;
+    width: 21rem;
+    height: auto;
+    top: -41.875rem;
+    left: 3.125rem;
+  }
+
+  #imageContainer9.show {
+    opacity: 1;
+  }
+  
+  #hoverImage9 {
+    position: absolute;
+    width: 31.25rem;
+    height: auto;
+    top: -41.875rem;
+    left: 0.77rem;
+  }
+  #imageContainer10.show {
+    opacity: 1;
+  }
+  
+  #hoverImage10 {
+    position: absolute;
+    width: 21rem;
+    height: auto;
+    top: -51.875rem;
+    left: 2.30rem;
+  }
+#stomach2{
+  height: 1.25rem;
+  width: 5.75rem;
+  background-color: rgb(255, 234, 0);
+  top: 50.25rem;
+  left: 44.375rem;
+  
+}
+.color1{
+  background-color: #e48585a2;
+  transition: all 300ms ease-in-out ;
+}
+.color2{
+  background-color: #ff040476;
+  transition: all 300ms ease-in-out ;
+}
+.color3{
+  background-color: #edd0acd6;
+  transition: all 300ms ease-in-out ;
+}
+.color4{
+  background-color: #6cb07ad5;
+  transition: all 300ms ease-in-out ;
+}
+.color5{
+  background-color: #e946466c;
+  transition: all 300ms ease-in-out ;
+}
+.color6{
+  background-color: #e946466c;
+  transition: all 300ms ease-in-out ;
+}
+.color7{
+  background-color: #f7940a95;
+  transition: all 300ms ease-in-out ;
+}
+.color8{
+  background-color: #800020cd;
+  transition: all 300ms ease-in-out ;
+}
+.color9{
+  background-color: #FFCCCC;
+  transition: all 300ms ease-in-out ;
+}
+.color10{
+  background-color: #e48585a2;
+  transition: all 300ms ease-in-out ;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  background-color: #32ccff;
+  color: #FFFFFF;
+  border-radius: 0.31rem;
+  transition: background-color 0.3s ease;
+  transition: all 300ms ease-in;
+  margin-bottom: 0.75rem;
+}
+
+.btn:hover {
+  background-color: #1faddd;
+  transform: scale(1.1);
+  color: #1f252b;
+}
+.skeleton{
+  margin: auto;
+  display: block;
+
+}
+#btn2{
+  margin-top: 1.25rem;
+}
+.skel_body{
+
+  background-color: rgb(0, 0, 0);
+}
+.skel_body.skel_new_color{
+  background-color:  rgb(48, 31, 31);
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.01);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.01);
+  }
+  80% {
+    transform: scale(1);
+  }
+  90%{
+    transform: scale(1.01);
+  }
+  100% {
+    transform: scale(1.0);
+  }
+}
+#canvas-container {
+  width: 100%;
+  height: 100vh;
+}
+
+
+
+
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+.image {
+  display: block;
+}
+
+.zoom-lens {
+  position: absolute;
+  width: 12.5rem;
+  height: 12.5rem;
+  border-radius: 50%;
+  border: 2px solid #000;
+  pointer-events: none;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(2); /* Adjust scale value to increase zoom level */
+  transition: opacity 0.3s ease;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.lens-button {
+  position: absolute;
+  top: 0.625rem;
+  left: -21.875rem;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  color: #fff;
+  padding: 0.625rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  z-index: 1;
+}
+

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skeleton</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="skel_body" id="skel_body">
+<div class="container">
+    <img class="skeleton" src="skeleton.png" alt="" id="skeleton">
+    <a href="index.html" class="btn" id="btn2">
+        Body Organs
+      </a>
+      <div class="zoom-lens"></div>
+    <button class="lens-button btn">Lens</button>
+
+
+</div>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var container = document.querySelector(".container");
+  var lensButton = document.querySelector(".lens-button");
+  var zoomLens = document.querySelector(".zoom-lens");
+  var image = document.querySelector(".skeleton");
+
+  var isLensActive = false;
+  var offsetX = 10; // Adjust the X offset for the zoom lens position
+  var offsetY = 10; // Adjust the Y offset for the zoom lens position
+
+  lensButton.addEventListener("click", function() {
+    isLensActive = !isLensActive;
+    if (isLensActive) {
+      zoomLens.style.opacity = 1;
+    } else {
+      zoomLens.style.opacity = 0;
+    }
+  });
+
+  container.addEventListener("mousemove", function(event) {
+    if (isLensActive) {
+      var containerRect = container.getBoundingClientRect();
+      var x = event.clientX - containerRect.left;
+      var y = event.clientY - containerRect.top + window.pageYOffset+50; // Account for scroll position
+      var lensSize = 200; // Adjust the size of the zoom lens
+
+      var scaleX = image.offsetWidth / container.offsetWidth;
+      var scaleY = image.offsetHeight / container.offsetHeight;
+
+      var zoomX = -x * scaleX + offsetX;
+      var zoomY = -y * scaleY + offsetY;
+
+      zoomLens.style.backgroundImage = "url('" + image.src + "')";
+      zoomLens.style.backgroundSize = (image.offsetWidth * scaleX)/16 + "rem " + (image.offsetHeight * scaleY)/16 + "rem";
+      zoomLens.style.backgroundPosition = (zoomX +80)/16 + "rem "  + (zoomY +200)/16+ "rem";
+    }
+  });
+
+  window.addEventListener("scroll", function() {
+    offsetY =  window.pageYOffset;
+    zoomLens.style.top = (offsetY +300)/16+ "rem";
+  });
+  zoomLens.style.left =  "-11.25rem";
+});
+
+
+      </script>
+</body>
+
+</html>
